@@ -1,8 +1,9 @@
 {
     "name": "scm-buttons-vscode",
     "publisher": "tomblind",
-    "version": "0.1.0",
-    "description": "Additional Source Control Buttons",
+    "version": "0.1.1",
+    "description": "Additional Source Control Buttons for Visual Studio Code",
+    "displayName": "Source Control Buttons",
     "icon": "resources/icon.png",
     "main": "extension/extension.js",
     "repository": {
