@@ -1,0 +1,32 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Bundle",
+			"type": "npm",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"script": "bundle",
+			"problemMatcher": [
+				"$tsc"
+			],
+			"dependsOn": "Clean"
+		},
+		{
+			"label": "Clean",
+			"type": "npm",
+			"script": "clean",
+			"problemMatcher": []
+		},
+		{
+			"label": "Build",
+			"type": "npm",
+			"script": "build",
+			"problemMatcher": [
+				"$tsc"
+			]
+		}
+	]
+}

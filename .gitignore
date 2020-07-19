@@ -1,0 +1,4 @@
+**/*.vsix
+extension/**/*.js
+extension/**/*.js.map
+node_modules
