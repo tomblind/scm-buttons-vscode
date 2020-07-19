@@ -462,7 +462,7 @@
         }
     },
     "devDependencies": {
-        "@types/vscode": "^1.47.0",
+        "@types/vscode": "^1.44.0",
         "tslint": "^6.1.2",
         "tslint-eslint-rules": "^5.4.0",
         "typescript": "^3.9.7",
