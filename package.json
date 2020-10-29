@@ -1,7 +1,7 @@
 {
     "name": "scm-buttons-vscode",
     "publisher": "tomblind",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Additional Source Control Buttons for Visual Studio Code",
     "displayName": "Source Control Buttons",
     "icon": "resources/icon.png",
@@ -176,6 +176,11 @@
                         "type": "boolean",
                         "default": false,
                         "description": "Git Show Output"
+                    },
+                    "scm-buttons.showGitSync": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Git Sync"
                     }
                 }
             }
@@ -330,6 +335,12 @@
                 "command": "scm-buttons.git.showOutput",
                 "title": "Show Git Output",
                 "icon": "$(terminal)"
+            },
+            {
+                "category": "Source Control Buttons",
+                "command": "scm-buttons.git.sync",
+                "title": "Sync",
+                "icon": "$(sync)"
             }
         ],
         "menus": {
@@ -458,6 +469,11 @@
                     "when": "scmProvider == git && config.scm-buttons.showGitShowOutput",
                     "command": "scm-buttons.git.showOutput",
                     "group": "navigation@25"
+                },
+                {
+                    "when": "scmProvider == git && config.scm-buttons.showGitSync",
+                    "command": "scm-buttons.git.sync",
+                    "group": "navigation@26"
                 }
             ]
         }
