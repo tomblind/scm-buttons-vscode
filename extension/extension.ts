@@ -43,8 +43,15 @@ export function activate(context: vscode.ExtensionContext) {
     for (const commandEntry of extension.packageJSON.contributes.commands) {
         if (commandEntry.command.startsWith(commandPrefix)) {
             const vscodeCommand = commandEntry.command.substr(commandPrefix.length);
-            const commandFunction = () => {
-                vscode.commands.executeCommand(vscodeCommand);
+            const commandFunction = (...args: any[]) => {
+                let uri: vscode.Uri |undefined;
+                if (args.length > 0) {
+                    const rootUri = args[0]?.rootUri
+                    if (rootUri instanceof vscode.Uri) {
+                        //uri = rootUri;
+                    }
+                }
+                vscode.commands.executeCommand(vscodeCommand, uri);
             };
             context.subscriptions.push(vscode.commands.registerCommand(commandEntry.command, commandFunction));
         }
