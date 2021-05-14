@@ -48,7 +48,7 @@ export function activate(context: vscode.ExtensionContext) {
                 if (args.length > 0) {
                     const rootUri = args[0]?.rootUri
                     if (rootUri instanceof vscode.Uri) {
-                        //uri = rootUri;
+                        uri = rootUri;
                     }
                 }
                 vscode.commands.executeCommand(vscodeCommand, uri);
